@@ -14,60 +14,60 @@ Nenhuma
 ## Tarefas
 
 ### 1. Instalação e Configuração Base
-- [ ] Verificar versão do PHP (8.2+)
-- [ ] Verificar versão do Composer
-- [ ] Instalar Laravel 11.x
-- [ ] Configurar arquivo `.env`
-- [ ] Configurar banco de dados (MySQL 8.0+ / PostgreSQL 14+)
-- [ ] Configurar Redis para Queue e Cache
+- [x] Verificar versão do PHP (8.2+)
+- [x] Verificar versão do Composer
+- [x] Instalar Laravel 11.x
+- [x] Configurar arquivo `.env`
+- [x] Configurar banco de dados (MySQL 8.0+ / PostgreSQL 14+)
+- [x] Configurar Redis para Queue e Cache
 
 ### 2. Dependências do Projeto
-- [ ] Instalar Laravel Sanctum para autenticação
-- [ ] Configurar PSR-12 Code Style
-- [ ] Instalar PHPStan para análise estática
-- [ ] Instalar Pest ou PHPUnit para testes
-- [ ] Configurar Laravel Pint para formatação
+- [x] Instalar Laravel Sanctum para autenticação
+- [x] Configurar PSR-12 Code Style
+- [x] Instalar PHPStan para análise estática
+- [x] Instalar Pest ou PHPUnit para testes
+- [x] Configurar Laravel Pint para formatação
 
 ### 3. Estrutura de Diretórios (Nova Arquitetura)
-- [ ] Criar diretório `app/Actions/`
-  - [ ] `app/Actions/Customer/`
-  - [ ] `app/Actions/Charge/`
-  - [ ] `app/Actions/PaymentGateway/`
-- [ ] Criar diretório `app/Queries/`
-  - [ ] `app/Queries/Customer/`
-  - [ ] `app/Queries/Charge/`
-  - [ ] `app/Queries/PaymentGateway/`
-- [ ] Criar diretório `app/DTOs/`
-  - [ ] `app/DTOs/Customer/`
-  - [ ] `app/DTOs/Charge/`
-  - [ ] `app/DTOs/Webhook/`
-- [ ] Criar diretório `app/Enums/`
-- [ ] Criar diretório `app/Events/`
-- [ ] Criar diretório `app/Exceptions/`
-- [ ] Criar diretório `app/Repositories/` (APENAS para abstrações necessárias)
-  - [ ] `app/Repositories/Contracts/`
-  - [ ] `app/Repositories/Eloquent/`
-- [ ] Criar diretório `app/Services/` (APENAS Factories e Orchestrators)
-  - [ ] `app/Services/PaymentGateway/`
-- [ ] Criar diretório `app/Http/Requests/`
-- [ ] Criar diretório `app/Http/Resources/`
-- [ ] Criar diretório `app/Jobs/`
-- [ ] Criar diretório `app/Listeners/`
+- [x] Criar diretório `app/Actions/`
+  - [x] `app/Actions/Customer/`
+  - [x] `app/Actions/Charge/`
+  - [x] `app/Actions/PaymentGateway/`
+- [x] Criar diretório `app/Queries/`
+  - [x] `app/Queries/Customer/`
+  - [x] `app/Queries/Charge/`
+  - [x] `app/Queries/PaymentGateway/`
+- [x] Criar diretório `app/DTOs/`
+  - [x] `app/DTOs/Customer/`
+  - [x] `app/DTOs/Charge/`
+  - [x] `app/DTOs/Webhook/`
+- [x] Criar diretório `app/Enums/`
+- [x] Criar diretório `app/Events/`
+- [x] Criar diretório `app/Exceptions/`
+- [x] Criar diretório `app/Repositories/` (APENAS para abstrações necessárias)
+  - [x] `app/Repositories/Contracts/`
+  - [x] `app/Repositories/Eloquent/`
+- [x] Criar diretório `app/Services/` (APENAS Factories e Orchestrators)
+  - [x] `app/Services/PaymentGateway/`
+- [x] Criar diretório `app/Http/Requests/`
+- [x] Criar diretório `app/Http/Resources/`
+- [x] Criar diretório `app/Jobs/`
+- [x] Criar diretório `app/Listeners/`
 
 ### 4. Configurações Gerais
-- [ ] Configurar timezone para America/Sao_Paulo
-- [ ] Configurar locale para pt_BR
-- [ ] Configurar queue connection para Redis
-- [ ] Configurar cache driver para Redis
-- [ ] Configurar session driver
+- [x] Configurar timezone para America/Sao_Paulo
+- [x] Configurar locale para pt_BR
+- [x] Configurar queue connection para Redis
+- [x] Configurar cache driver para Redis
+- [x] Configurar session driver
 
 ### 5. Versionamento de API
-- [ ] Criar middleware `ApiVersionMiddleware`
-- [ ] Configurar rotas `/api/v1`
-- [ ] Estruturar Controllers em `Api/V1/`
+- [x] Criar middleware `ApiVersionMiddleware`
+- [x] Configurar rotas `/api/v1`
+- [x] Estruturar Controllers em `Api/V1/`
 
 ### 6. Exception Handler
-- [ ] Configurar `app/Exceptions/Handler.php` para registrar Custom Exceptions
+- [x] Configurar `app/Exceptions/Handler.php` para registrar Custom Exceptions
   ```php
   public function register(): void
   {
@@ -91,9 +91,9 @@ Nenhuma
   ```
 
 ### 7. Configurações de Segurança
-- [ ] Configurar CORS
-- [ ] Configurar Rate Limiting
-- [ ] Configurar Sanctum
+- [x] Configurar CORS
+- [x] Configurar Rate Limiting
+- [x] Configurar Sanctum
 - [ ] Configurar políticas de senha
 
 ### 8. Service Providers
