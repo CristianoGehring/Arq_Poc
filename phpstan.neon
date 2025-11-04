@@ -6,7 +6,5 @@ parameters:
     paths:
         - app
     excludePaths:
-        - app/Console/Kernel.php
-        - app/Exceptions/Handler.php
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
+        - app/Console/Kernel.php (?)
+        - app/Exceptions/Handler.php (?)

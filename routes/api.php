@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\CustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -9,5 +10,6 @@ Route::prefix('v1')->group(function () {
         return $request->user();
     })->middleware('auth:sanctum');
 
-    // Adicione suas rotas v1 aqui
+    // Customer routes
+    Route::apiResource('customers', CustomerController::class);
 });
