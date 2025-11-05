@@ -17,6 +17,10 @@ use App\Http\Requests\Customer\UpdateCustomerRequest;
 use App\Http\Resources\CustomerResource;
 use App\Queries\Customer\GetAllCustomersQuery;
 use App\Queries\Customer\GetCustomerByIdQuery;
+use App\Http\Requests\Charge\ListChargesRequest;
+use App\Http\Resources\ChargeResource;
+use App\Models\Customer;
+use App\Queries\Charge\GetCustomerChargesQuery;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
@@ -119,5 +123,27 @@ class CustomerController extends Controller
         $customer = $action->execute($id);
 
         return new CustomerResource($customer);
+    }
+
+    /**
+     * Lista cobranças do cliente
+     */
+    public function charges(
+        int $id,
+        ListChargesRequest $request,
+        GetCustomerChargesQuery $query
+    ): AnonymousResourceCollection {
+        // Verificar se customer existe
+        $customer = Customer::find($id);
+        if (!$customer) {
+            throw new CustomerNotFoundException($id);
+        }
+
+        $charges = $query->execute(
+            customerId: $id,
+            perPage: $request->input('per_page', 15)
+        );
+
+        return ChargeResource::collection($charges);
     }
 }

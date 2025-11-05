@@ -3,19 +3,16 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Http\JsonResponse;
 
-class ChargeException extends Exception
+abstract class ChargeException extends Exception
 {
-    public function __construct(string $message = '', int $code = 400)
+    protected int $statusCode = 400;
+
+    public function getStatusCode(): int
     {
-        parent::__construct($message, $code);
+        return $this->statusCode;
     }
 
-    public function render(): \Illuminate\Http\JsonResponse
-    {
-        return response()->json([
-            'message' => $this->getMessage(),
-            'error' => 'charge_exception',
-        ], $this->getCode());
-    }
+    abstract public function render(): JsonResponse;
 }
