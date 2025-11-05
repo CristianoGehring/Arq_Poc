@@ -14,7 +14,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
 ## Ordem de Implementação
 
 ### 1. Enums
-- [ ] Criar `app/Enums/CustomerStatus.php`
+- [x] Criar `app/Enums/CustomerStatus.php`
   ```php
   enum CustomerStatus: string
   {
@@ -25,7 +25,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 2. Custom Exceptions
-- [ ] Criar `app/Exceptions/CustomerException.php` (Base)
+- [x] Criar `app/Exceptions/CustomerException.php` (Base)
   ```php
   abstract class CustomerException extends Exception
   {
@@ -40,7 +40,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Exceptions/CustomerNotFoundException.php`
+- [x] Criar `app/Exceptions/CustomerNotFoundException.php`
   ```php
   class CustomerNotFoundException extends CustomerException
   {
@@ -61,7 +61,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Exceptions/CustomerAlreadyExistsException.php`
+- [x] Criar `app/Exceptions/CustomerAlreadyExistsException.php`
   ```php
   class CustomerAlreadyExistsException extends CustomerException
   {
@@ -86,7 +86,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Exceptions/InvalidCustomerDataException.php`
+- [x] Criar `app/Exceptions/InvalidCustomerDataException.php`
   ```php
   class InvalidCustomerDataException extends CustomerException
   {
@@ -108,7 +108,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 3. DTOs (Data Transfer Objects)
-- [ ] Criar `app/DTOs/Customer/CreateCustomerDTO.php`
+- [x] Criar `app/DTOs/Customer/CreateCustomerDTO.php`
   ```php
   readonly class CreateCustomerDTO
   {
@@ -145,7 +145,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/DTOs/Customer/UpdateCustomerDTO.php`
+- [x] Criar `app/DTOs/Customer/UpdateCustomerDTO.php`
   ```php
   readonly class UpdateCustomerDTO
   {
@@ -184,7 +184,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 4. Migration & Model
-- [ ] Criar migration `create_customers_table`
+- [x] Criar migration `create_customers_table`
   ```php
   Schema::create('customers', function (Blueprint $table) {
       $table->id();
@@ -205,7 +205,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   });
   ```
 
-- [ ] Criar `app/Models/Customer.php`
+- [x] Criar `app/Models/Customer.php`
   ```php
   class Customer extends Model
   {
@@ -254,7 +254,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 5. Actions (Write Operations)
-- [ ] Criar `app/Actions/Customer/CreateCustomerAction.php`
+- [x] Criar `app/Actions/Customer/CreateCustomerAction.php`
   ```php
   class CreateCustomerAction
   {
@@ -288,7 +288,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Actions/Customer/UpdateCustomerAction.php`
+- [x] Criar `app/Actions/Customer/UpdateCustomerAction.php`
   ```php
   class UpdateCustomerAction
   {
@@ -325,7 +325,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Actions/Customer/DeleteCustomerAction.php`
+- [x] Criar `app/Actions/Customer/DeleteCustomerAction.php`
   ```php
   class DeleteCustomerAction
   {
@@ -355,7 +355,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Actions/Customer/ActivateCustomerAction.php`
+- [x] Criar `app/Actions/Customer/ActivateCustomerAction.php`
   ```php
   class ActivateCustomerAction
   {
@@ -380,11 +380,11 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Actions/Customer/DeactivateCustomerAction.php`
-- [ ] Criar `app/Actions/Customer/BlockCustomerAction.php`
+- [x] Criar `app/Actions/Customer/DeactivateCustomerAction.php`
+- [x] Criar `app/Actions/Customer/BlockCustomerAction.php`
 
 ### 6. Queries (Read Operations)
-- [ ] Criar `app/Queries/Customer/GetCustomerByIdQuery.php`
+- [x] Criar `app/Queries/Customer/GetCustomerByIdQuery.php`
   ```php
   class GetCustomerByIdQuery
   {
@@ -399,7 +399,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Queries/Customer/GetAllCustomersQuery.php`
+- [x] Criar `app/Queries/Customer/GetAllCustomersQuery.php`
   ```php
   class GetAllCustomersQuery
   {
@@ -415,7 +415,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Queries/Customer/GetActiveCustomersQuery.php`
+- [x] Criar `app/Queries/Customer/GetActiveCustomersQuery.php`
   ```php
   class GetActiveCustomersQuery
   {
@@ -432,7 +432,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Queries/Customer/SearchCustomersByNameQuery.php`
+- [x] Criar `app/Queries/Customer/SearchCustomersByNameQuery.php`
   ```php
   class SearchCustomersByNameQuery
   {
@@ -448,7 +448,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Queries/Customer/SearchCustomersByDocumentQuery.php`
+- [x] Criar `app/Queries/Customer/SearchCustomersByDocumentQuery.php`
   ```php
   class SearchCustomersByDocumentQuery
   {
@@ -463,7 +463,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 7. Events
-- [ ] Criar `app/Events/CustomerCreated.php`
+- [x] Criar `app/Events/CustomerCreated.php`
   ```php
   class CustomerCreated
   {
@@ -473,11 +473,11 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Events/CustomerUpdated.php`
-- [ ] Criar `app/Events/CustomerDeleted.php`
+- [x] Criar `app/Events/CustomerUpdated.php`
+- [x] Criar `app/Events/CustomerDeleted.php`
 
 ### 8. Form Requests
-- [ ] Criar `app/Http/Requests/Customer/StoreCustomerRequest.php`
+- [x] Criar `app/Http/Requests/Customer/StoreCustomerRequest.php`
   ```php
   class StoreCustomerRequest extends FormRequest
   {
@@ -526,7 +526,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Http/Requests/Customer/UpdateCustomerRequest.php`
+- [x] Criar `app/Http/Requests/Customer/UpdateCustomerRequest.php`
   ```php
   class UpdateCustomerRequest extends FormRequest
   {
@@ -546,7 +546,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 9. API Resources
-- [ ] Criar `app/Http/Resources/CustomerResource.php`
+- [x] Criar `app/Http/Resources/CustomerResource.php`
   ```php
   class CustomerResource extends JsonResource
   {
@@ -574,7 +574,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `app/Http/Resources/CustomerCollection.php`
+- [x] Criar `app/Http/Resources/CustomerCollection.php`
   ```php
   class CustomerCollection extends ResourceCollection
   {
@@ -594,7 +594,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 10. Controller
-- [ ] Criar `app/Http/Controllers/Api/V1/CustomerController.php`
+- [x] Criar `app/Http/Controllers/Api/V1/CustomerController.php`
   ```php
   class CustomerController extends Controller
   {
@@ -670,7 +670,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 11. Routes
-- [ ] Adicionar rotas em `routes/api.php`
+- [x] Adicionar rotas em `routes/api.php`
   ```php
   Route::prefix('v1')->group(function () {
       Route::apiResource('customers', CustomerController::class);
@@ -693,7 +693,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   ```
 
 ### 13. Testes
-- [ ] Criar `tests/Feature/Api/V1/CustomerTest.php`
+- [x] Criar `tests/Feature/Api/V1/CustomerTest.php`
   ```php
   class CustomerTest extends TestCase
   {
@@ -739,7 +739,7 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `tests/Unit/Actions/Customer/CreateCustomerActionTest.php`
+- [x] Criar `tests/Unit/Actions/Customer/CreateCustomerActionTest.php`
   ```php
   class CreateCustomerActionTest extends TestCase
   {
@@ -787,42 +787,42 @@ Implementar o domínio completo de gerenciamento de clientes com CRUD, seguindo 
   }
   ```
 
-- [ ] Criar `tests/Unit/Queries/Customer/GetCustomerByIdQueryTest.php`
-- [ ] Criar `tests/Unit/DTOs/Customer/CreateCustomerDTOTest.php`
+- [x] Criar `tests/Unit/Queries/Customer/GetCustomerByIdQueryTest.php`
+- [x] Criar `tests/Unit/DTOs/Customer/CreateCustomerDTOTest.php`
 
 ---
 
 ## Checklist de Qualidade
 
 ### Arquitetura
-- [ ] Actions retornam Models (não JsonResponse)
-- [ ] Queries usam Eloquent diretamente
-- [ ] Custom Exceptions com render()
-- [ ] DTOs readonly criados
-- [ ] Sem Repository (não há múltiplas implementações)
-- [ ] SOLID principles seguidos
+- [x] Actions retornam Models (não JsonResponse)
+- [x] Queries usam Eloquent diretamente
+- [x] Custom Exceptions com render()
+- [x] DTOs readonly criados
+- [x] Sem Repository (não há múltiplas implementações)
+- [x] SOLID principles seguidos
 
 ### Código
-- [ ] Type hints completos
-- [ ] Sem else desnecessário
-- [ ] Nomes descritivos
-- [ ] Métodos pequenos (<20 linhas)
-- [ ] Actions sem HTTP concerns
+- [x] Type hints completos
+- [x] Sem else desnecessário
+- [x] Nomes descritivos
+- [x] Métodos pequenos (<20 linhas)
+- [x] Actions sem HTTP concerns
 
 ### Validação
-- [ ] FormRequest para validação HTTP (422)
-- [ ] Custom Exceptions para erros de negócio (404, 422)
-- [ ] Regras de negócio nas Actions
+- [x] FormRequest para validação HTTP (422)
+- [x] Custom Exceptions para erros de negócio (404, 422)
+- [x] Regras de negócio nas Actions
 
 ### Performance
-- [ ] Eager loading implementado
-- [ ] Índices criados
-- [ ] Paginação obrigatória
+- [x] Eager loading implementado
+- [x] Índices criados
+- [x] Paginação obrigatória
 
 ### Testes
-- [ ] Feature tests (Controllers)
-- [ ] Unit tests (Actions/Queries)
-- [ ] Cobertura >80%
+- [x] Feature tests (Controllers)
+- [x] Unit tests (Actions/Queries)
+- [x] Cobertura >80%
 
 ---
 
@@ -912,6 +912,9 @@ POST /api/v1/customers
 - Método render() retorna JsonResponse
 - Controller não sabe de status de erro
 - Registrar no Exception Handler
+
+⚠️ **Arquivo Handler.php ausente**
+- O arquivo `app/Exceptions/Handler.php` não foi encontrado no projeto. Isso impede a verificação do registro de exceções e pode indicar um problema na configuração inicial do Laravel.
 
 📚 **Referências**
 - Prompt.MD: Action Pattern, Query Pattern, Custom Exceptions
